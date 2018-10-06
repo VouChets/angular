@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>Nutricion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="icon" href="favicon.ico">
+        <meta name="theme-color" content="#51b7ff">
+        <meta http-equiv="X-UA-Compatible" content="IE=11" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+        <!-- build:css() styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="lib/animate.css/animate.css" />
+        <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css" />
+        <link rel="stylesheet" href="lib/angular-datatables/dist/css/angular-datatables.css" />
+        <link rel="stylesheet" href="lib/angular-datatables/dist/plugins/bootstrap/datatables.bootstrap.min.css" />
+        <link rel="stylesheet" href="lib/angularjs-toaster/toaster.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp) css/styles.css -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/dataTables.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <!-- endbuild -->
+
+    </head>
+    <body>
+        <div ui-view="layout" ></div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- injector:bowerjs -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-touch/angular-touch.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="lib/angular-datatables/dist/angular-datatables.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/colreorder/angular-datatables.colreorder.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/colvis/angular-datatables.colvis.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
+    <script src="lib/angular-datatables/dist/plugins/select/angular-datatables.select.js"></script>
+    <script src="lib/angularjs-toaster/toaster.js"></script>
+    <!-- endinjector -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/custom.js -->
+    <!-- injector:js -->
+    <script src="js/config.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/others/mercadolibre.js"></script>
+    <script src="modules/common/common.js"></script>
+    <script src="modules/environment/environment.js"></script>
+    <script src="modules/home/home.js"></script>
+    <script src="modules/login/login.js"></script>
+    <script src="modules/main/main.js"></script>
+    <script src="modules/manager/manager.js"></script>
+    <script src="modules/environment/config/environment.js"></script>
+    <script src="modules/home/config/routes.js"></script>
+    <script src="modules/login/config/routes.js"></script>
+    <script src="modules/main/config/routes.js"></script>
+    <script src="modules/manager/config/routes.js"></script>
+    <script src="modules/common/services/common.constant.js"></script>
+    <script src="modules/common/services/common.resources.js"></script>
+    <script src="modules/common/services/utils.services.js"></script>
+    <script src="modules/main/services/http.interceptor.js"></script>
+    <script src="modules/manager/directives/manager.directive.js"></script>
+    <script src="modules/home/filters/home.filters.js"></script>
+    <script src="modules/main/filters/main.filters.js"></script>
+    <script src="modules/home/controllers/ModalNuevaUnidadMedidaController.js"></script>
+    <script src="modules/home/controllers/ModalNuevoPedidoController.js"></script>
+    <script src="modules/home/controllers/ModalNuevoProductoController.js"></script>
+    <script src="modules/home/controllers/home.controller.js"></script>
+    <script src="modules/home/controllers/pedidos.controller.js"></script>
+    <script src="modules/home/controllers/producto.controller.js"></script>
+    <script src="modules/home/controllers/unidadesMedidas.controller.js"></script>
+    <script src="modules/login/controllers/login.controller.js"></script>
+    <script src="modules/login/controllers/logout.controller.js"></script>
+    <script src="modules/main/controllers/main.controller.js"></script>
+    <script src="modules/manager/controllers/login.controller.js"></script>
+    <script src="modules/manager/controllers/manager.home.controller.js"></script>
+    <script src="modules/manager/controllers/manager.navbar.controller.js"></script>
+    <!-- endinjector -->
+    <!-- endbuild -->
+    
+
+</body>
+
+
+</html>
