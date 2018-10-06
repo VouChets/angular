@@ -1,0 +1,105 @@
+<navbar></navbar>
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-md-2">    
+                <select class="form-control" ng-model="post.status">
+                    <option value="show">Activo</option>
+                    <option value="hide">Oculto</option>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <input class="form-control" placeholder="N°" type="number" ng-model="post.num">
+            </div>
+            <div class="col-md-3">    
+                <input class="form-control" placeholder="Título" ng-model="post.title">
+            </div>
+            <div class="col-md-3">    
+                <select class="form-control" ng-options="s.id as s.description for s in sections" ng-model="post.section_id">
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input class="form-control" placeholder="Link de video" ng-model="post.video">
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-primary margin-top-4" href="{{post.video}}" target="_blank">Probar Link de video</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input class="form-control form-inline" placeholder="Link" ng-model="post.link">
+            </div>
+            <div class="col-md-3">    
+                <input class="form-control" placeholder="Texto del link" ng-model="post.link_text">
+            </div>
+            <div class="col-md-1">
+                <a ng-show="post.link != ''" href="{{post.link}}" target="_blank"><span class="fa fa-external-link fa-2x"></span></a>
+            </div>
+
+            <div class="col-md-12">
+                <textarea class="form-control" rows="4" ng-model="post.description">
+                            
+                </textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input ng-model="form.image" type="file" class="form-control" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{{image_source}}" style="max-width: 300px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-success" ng-show="!isModificar" ng-click="guardarPost()">Guardar</button>
+                <button class="btn btn-success" ng-show="isModificar" ng-click="updatePost()">Aplicar cambios</button>
+                <button class="btn btn-default" ng-show="isModificar" ng-click="cancelarPost()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div class="well">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="text-center">
+                    <table class="table table-responsive table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">N&deg; orden</th>
+                                <th class="text-center">Estado</th>
+                                <th class="text-center">T&iacute;tulo</th>
+                                <th class="text-center">Secci&oacute;n</th>
+                                <th class="text-center">Descripci&oacute;n</th>
+                                <th class="text-center">Texto link</th>
+                                <th class="text-center">Link</th>                            
+                                <!--th>Creado</th>
+                                <th>Actualizado</th-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="p in posts" ng-click="modificarPost(p)" ng-mouseenter="showImage(p.image);" ng-mouseleave="hideImage();">
+                                <td>{{p.num}}</td>
+                                <td><span ng-class="{'fa fa-check verde':p.status == 'show','fa fa-times rojo':p.status == 'hide'}"></span></td>
+                                <td>{{p.title}}</td>
+                                <td>{{p.section.description}}</td>
+                                <td>{{p.description}}</td>
+                                <td>{{p.link_text}}</td>
+                                <td>{{p.link}}</td>
+                                <!--td>{{p.created_at|date:"dd/MM/yyyy HH:mm"}}</td>
+                                <td>{{p.updated_at|date:"dd/MM/yyyy HH:mm"}}</td-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" ng-show="miniImage.length > 0" src="{{miniImage}}">
+            </div>
+        </div>
+    </div>
+</div>
